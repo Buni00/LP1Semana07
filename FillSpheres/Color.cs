@@ -21,7 +21,34 @@ namespace FillSpheres
             this.red = ColorMaxID(red);
             this.green = ColorMaxID(green);
             this.blue = ColorMaxID(blue);
+            this.alpha = 255;
         }
+
+        public int Red
+        {
+            get {return red; }
+            set { red = ColorMaxID(value); }
+        }
+
+        public int Green
+        {
+            get {return green; }
+            set { green = ColorMaxID(value); }
+        }
+
+        public int Blue
+        {
+            get {return blue; }
+            set { blue = ColorMaxID(value); }
+        }
+
+        public int Alpha
+        {
+            get {return alpha; }
+            set { alpha = ColorMaxID(value); }
+        }
+
+        public int 
 
         private int ColorMaxID(int value)
         {
