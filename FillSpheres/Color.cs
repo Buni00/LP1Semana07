@@ -16,8 +16,11 @@ namespace BetterFillSpheres
         }
 
         public Color(int red, int green, int blue)
-            : this(red, green, blue, 255)
         {
+            Red = ColorMaxID(red);
+            Green = ColorMaxID(green);
+            Blue = ColorMaxID(blue);
+            Alpha = 255;
         }
 
         public int GetGrey()
@@ -33,6 +36,20 @@ namespace BetterFillSpheres
                 return 255;
             else
                 return value;
+        }
+
+        public string Name
+        {
+            get
+            {
+                return (Red, Green, Blue) switch
+                {
+                    (255, 0, 0) => "Red 100%",
+                    (0, 255, 0) => "Green 100%",
+                    (0, 0, 255) => "Blue 100%",
+                    _ => "Mixed"
+                };
+            }
         }
     }
 }
