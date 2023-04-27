@@ -19,6 +19,12 @@ namespace FillSpheres
             radius = 0;
         }
 
+        public void Throw()
+        {
+            if (radius >0)
+                nThrows++;
+        }
+
 
     }
 
