@@ -25,6 +25,11 @@ namespace FillSpheres
                 nThrows++;
         }
 
+        public int GetTimesThrown()
+        {
+            return nThrows;
+        }
+
 
     }
 
