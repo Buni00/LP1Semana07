@@ -1,6 +1,6 @@
 using System;
 
-namespace FillSpheres
+namespace BetterFillSpheres
 {
     public class Sphere
     {

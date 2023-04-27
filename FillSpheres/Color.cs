@@ -1,57 +1,28 @@
-namespace FillSpheres
+namespace BetterFillSpheres
 {
-
     public class Color
     {
-        private int red;
-        private int green;
-        private int blue;
-        private int alpha;
+        public int Red { get; set; }
+        public int Green { get; set; }
+        public int Blue { get; set; }
+        public int Alpha { get; set; }
 
         public Color(int red, int green, int blue, int alpha)
         {
-            this.red = ColorMaxID(red);
-            this.green = ColorMaxID(green);
-            this.blue = ColorMaxID(blue);
-            this.alpha = ColorMaxID(alpha);
+            Red = ColorMaxID(red);
+            Green = ColorMaxID(green);
+            Blue = ColorMaxID(blue);
+            Alpha = ColorMaxID(alpha);
         }
 
         public Color(int red, int green, int blue)
+            : this(red, green, blue, 255)
         {
-            this.red = ColorMaxID(red);
-            this.green = ColorMaxID(green);
-            this.blue = ColorMaxID(blue);
-            this.alpha = 255;
-        }
-
-        public int Red
-        {
-            get {return red; }
-            set { red = ColorMaxID(value); }
-        }
-
-        public int Green
-        {
-            get {return green; }
-            set { green = ColorMaxID(value); }
-        }
-
-        public int Blue
-        {
-            get {return blue; }
-            set { blue = ColorMaxID(value); }
-        }
-
-        public int Alpha
-        {
-            get {return alpha; }
-            set { alpha = ColorMaxID(value); }
         }
 
         public int GetGrey()
         {
-            int grey = (red + green + blue)/3;
-            return grey;
+            return (Red + Green + Blue) / 3;
         }
 
         private int ColorMaxID(int value)
