@@ -28,12 +28,11 @@ namespace BetterFillSpheres
         static void PrintSphereState(string sphereName, Sphere sphere)
         {
             Console.WriteLine(sphereName);
-            Console.WriteLine("Red: " + sphere.color.Red + ", Green: " + sphere.color.Green + ", Blue: " + sphere.color.Blue + ", Alpha: " + sphere.color.Alpha);
-            Console.WriteLine("Radius: " + sphere.GetRadius);
-            Console.WriteLine("Times Thrown: " + sphere.GetTimesThrown());
+            Console.WriteLine("Red: " + sphere.Color.Red + ", Green: " + sphere.Color.Green + ", Blue: " + sphere.Color.Blue + ", Alpha: " + sphere.Color.Alpha);
+            Console.WriteLine("Radius: " + sphere.Radius);
+            Console.WriteLine("Times Thrown: " + sphere.TimesThrown);
             Console.WriteLine();
         }
     }
 }
-
 
