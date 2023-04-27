@@ -48,7 +48,11 @@ namespace FillSpheres
             set { alpha = ColorMaxID(value); }
         }
 
-        public int 
+        public int GetGrey()
+        {
+            int grey = (red + green + blue)/3;
+            return grey;
+        }
 
         private int ColorMaxID(int value)
         {
