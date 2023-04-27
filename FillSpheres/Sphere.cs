@@ -1,8 +1,10 @@
+using System;
+
 namespace FillSpheres
 {
     public class Sphere
     {
-        private Color color;
+        public Color color;
         private float radius;
         private int nThrows;
 
@@ -28,6 +30,11 @@ namespace FillSpheres
         public int GetTimesThrown()
         {
             return nThrows;
+        }
+
+        public float GetRadius 
+        {
+            get { return radius; }
         }
 
 
