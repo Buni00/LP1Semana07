@@ -1,43 +1,39 @@
-using System;
-
-namespace FillSpheres
+namespace BetterFillSpheres
 {
     public class Sphere
     {
-        public Color color;
         private float radius;
-        private int nThrows;
+        private int timesThrown;
 
-        public Sphere (Color color, float radius)
+        public Color Color { get; set; }
+
+        public float Radius
         {
-            this.color = color;
-            this.radius = radius;
-            this.nThrows = 0;
+            get { return radius; }
+            private set { radius = value; }
         }
 
+        public int TimesThrown
+        {
+            get { return timesThrown; }
+        }
+
+        public Sphere(Color color, float radius)
+        {
+            Color = color;
+            Radius = radius;
+            timesThrown = 0;
+        }
 
         public void Pop()
         {
-            radius = 0;
+            Radius = 0;
         }
 
         public void Throw()
         {
-            if (radius >0)
-                nThrows++;
+            if (Radius > 0)
+                timesThrown++;
         }
-
-        public int GetTimesThrown()
-        {
-            return nThrows;
-        }
-
-        public float GetRadius 
-        {
-            get { return radius; }
-        }
-
-
     }
-
 }

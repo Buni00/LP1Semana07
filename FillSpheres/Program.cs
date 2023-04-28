@@ -23,6 +23,7 @@ namespace BetterFillSpheres
             PrintSphereState("Sphere 1", sphere1);
             PrintSphereState("Sphere 2", sphere2);
             PrintSphereState("Sphere 3", sphere3);
+            
         }
 
         static void PrintSphereState(string sphereName, Sphere sphere)
